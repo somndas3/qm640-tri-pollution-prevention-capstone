@@ -9,7 +9,7 @@ U.S. manufacturing facilities report many pollution-prevention actions to the EP
 
 The primary outcome, `REDUCTION_10`, equals 1 when a facility-chemical's next-year on-site release is no more than 90% of the current-year release. Four linked research questions examine (1) whether reduction rates differ by year/subsector, (2) whether reporting any pollution-prevention action is associated with achieving `REDUCTION_10` after controls, (3) which broad action categories matter most, and (4) whether an interpretable model can predict non-reduction on a held-out future year (2023→2024).
 
-Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix E: dataset screenshots and folder structure) are in [`reports/QM640_Synopsis_TRI_2020_2024_V6.docx`](reports/QM640_Synopsis_TRI_2020_2024_V6.docx).
+Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix E: dataset screenshots for all reporting years and folder structure) are in [`reports/QM640_Synopsis_TRI_2020_2024_V7.docx`](reports/QM640_Synopsis_TRI_2020_2024_V7.docx).
 
 ## Dataset source
 
@@ -20,6 +20,8 @@ Full problem statement, hypotheses, sample-size planning, and analysis plan (inc
 - **Size:** ~78,000 rows × 185–282 columns per file per year (~630 MB across all 10 raw files) — too large for this repository. See [`data/README.md`](data/README.md) for download instructions and a 200-row sample per year.
 
 This is public-domain U.S. government data; no license restrictions apply to reuse.
+
+**Note:** reporting year 2024 is the held-out test set (the 2023→2024 transition). It is used only for the final RQ4 holdout evaluation and is never touched during model development on 2020-2023.
 
 ## Repository structure
 
@@ -35,7 +37,7 @@ qm640-tri-pollution-prevention-capstone/
 ├── src/
 │   └── data_prep.py           # loads raw TRI files, applies Form R / manufacturing NAICS filters, joins 1A+2A
 ├── reports/
-│   └── QM640_Synopsis_TRI_2020_2024_V6.docx   # full synopsis: background, RQs, hypotheses, sample size, analysis plan, references
+│   └── QM640_Synopsis_TRI_2020_2024_V7.docx   # full synopsis: background, RQs, hypotheses, sample size, analysis plan, references
 └── images/
     └── 01-06_*.png            # dataset preview, shape, info, describe, missing values, action-rate distribution
 ```
