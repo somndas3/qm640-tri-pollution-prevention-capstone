@@ -9,7 +9,7 @@ U.S. manufacturing facilities report many pollution-prevention actions to the EP
 
 The primary outcome, `REDUCTION_10`, equals 1 when a facility-chemical's next-year on-site release is no more than 90% of the current-year release. Four linked research questions examine (1) whether reduction rates differ by year/subsector, (2) whether reporting any pollution-prevention action is associated with achieving `REDUCTION_10` after controls, (3) which broad action categories matter most, and (4) whether an interpretable model can predict non-reduction on a held-out future year (2023→2024).
 
-Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix E: dataset screenshots for all reporting years and folder structure) are in [`reports/QM640_Synopsis_TRI_2020_2024_V8.docx`](reports/QM640_Synopsis_TRI_2020_2024_V8.docx).
+Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix E: dataset screenshots for all reporting years and folder structure) are in [`reports/QM640_Synopsis_TRI_2020_2024.docx`](reports/QM640_Synopsis_TRI_2020_2024.docx).
 
 ## Dataset source
 
@@ -33,11 +33,11 @@ qm640-tri-pollution-prevention-capstone/
 │   ├── README.md              # EPA download links + instructions to reproduce data/raw/
 │   └── sample/                # 200-row sample of File 1A and 2A for each year, 2020-2024
 ├── notebooks/
-│   └── 01_data_exploration.ipynb   # initial EDA: shape, head, dtypes, missing values, action-rate trend
+│   └── 01_data_exploration.ipynb   # EDA + Table 3 reconciliation for all years 2020-2024
 ├── src/
-│   └── data_prep.py           # loads raw TRI files, applies Form R / manufacturing NAICS filters, joins 1A+2A
+│   └── data_prep.py           # loads raw TRI files, applies Form R / manufacturing NAICS filters + consolidation, joins 1A+2A
 ├── reports/
-│   └── QM640_Synopsis_TRI_2020_2024_V8.docx   # full synopsis: background, RQs, hypotheses, sample size, analysis plan, references
+│   └── QM640_Synopsis_TRI_2020_2024.docx   # full synopsis: background, RQs, hypotheses, sample size, analysis plan, references
 └── images/
     └── 01-06_*.png            # dataset preview, shape, info, describe, missing values, action-rate distribution
 ```
