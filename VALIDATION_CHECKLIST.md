@@ -9,7 +9,7 @@ The raw TRI files, the Form R + manufacturing-NAICS filter, and duplicate consol
 - [ ] Re-run the filter pipeline (`src/data_prep.py` logic: Form R filter → primary NAICS starts with 31/32/33 → consolidate duplicate facility-chemical-year records) on the current raw files for every reporting year.
 - [ ] Compare the resulting counts to Table 3 (preliminary data-preparation counts) and Table 4 (consecutive-year matching counts) in the synopsis. They must match exactly. If they don't, the synopsis narrative or the pipeline code is wrong — find out which before publishing.
 - [ ] Confirm the sample-size totals quoted in prose (e.g., "123,688 eligible development records," "40,002 eligible holdout records") equal the sums of the relevant Table 4 columns.
-- [ ] Any screenshot showing raw, unfiltered file shape (`df.shape` straight off disk) must be labeled as raw, and a separate reconciliation figure must walk raw → filtered → consolidated so a reviewer can see the two views are consistent, not contradictory.
+- [ ] Any raw, unfiltered file shape (`df.shape` straight off disk) that is reported anywhere must be labeled as raw, and a separate reconciliation table (Table D1 in Appendix D — not a screenshot or image) must walk raw → filtered → consolidated so a reviewer can see the two views are consistent, not contradictory.
 - [ ] Reporting year 2024 (the 2023→2024 transition) is the held-out test set. Any new table or figure that includes 2024 alongside development years must flag it (color, label, or note) so it's not mistaken for a development-year record.
 
 ## 2. APA 7 / Walsh template compliance
@@ -36,7 +36,7 @@ Check the actual document properties, not just visual appearance — LibreOffice
 
 Cross-check section order and required content against `QM 640 Synopsis template.pdf`:
 
-- [ ] Background and Context → Problem Statement → Purpose of the Study → Scope and Objectives → Main Research Question → Research Questions and Hypotheses (≥4 RQs) → Sample Size Calculation → Data Description (incl. GitHub link, data dictionary, screenshots, tree structure) → Analytic Approach → Recommendation and Application → References.
+- [ ] Background and Context → Problem Statement → Purpose of the Study → Scope and Objectives → Main Research Question → Research Questions and Hypotheses (≥4 RQs) → Sample Size Calculation → Data Description (incl. GitHub link, data dictionary, folder-tree structure, data-count reconciliation) → Analytic Approach → Recommendation and Application → References.
 - [ ] GitHub repository is public, linked in the Data Description section, and contains complete data (or download instructions + sample) and code.
 - [ ] Folder tree structure is shown in the report whenever the repo has multiple folders.
 
@@ -46,3 +46,12 @@ Cross-check section order and required content against `QM 640 Synopsis template
 - [ ] Superseded images are deleted from `images/` when replaced.
 - [ ] `README.md` and `data/README.md` version references are updated to point at the new docx filename.
 - [ ] Verify each GitHub commit actually landed (navigate to the file/folder and confirm) — upload/delete clicks can silently fail to commit if the button is clicked before the page finishes staging the file.
+
+## 5. Professor feedback / terminology and appendix discipline (added after the RQ3 category → action-type revision)
+
+- [ ] No embedded images anywhere in the synopsis (title page logo excepted, if any). Any prior screenshot/figure must be represented as a native Word table built from the same underlying numbers, not a picture.
+- [ ] Appendices contain only material genuinely needed to support the main text; remove sections that duplicate main-text tables or that reviewers flag as unnecessary (e.g., a standalone execution-timeline appendix was removed per instructor feedback).
+- [ ] The Q1–Q4 summary table(s) name the actual statistical/predictive method in plain language first (e.g., "Chi-square test," "Logistic regression") before any technical detail — not just formula references.
+- [ ] If RQ3 terminology changes (e.g., "category" → "action type"), search the *entire* document, including table cells (not just body paragraphs), and update every RQ3-related instance while leaving unrelated generic statistical terms (e.g., "missing category" in a diagnostics table) untouched.
+- [ ] After removing any appendix or section, search the rest of the document for cross-references to it (by appendix letter and by name) and update or delete them — a removed appendix must not still be cited elsewhere as containing content that no longer exists.
+- [ ] Re-check for stray empty paragraphs (0 runs, no page break) immediately before headings — these can reappear after further manual edits to the document.

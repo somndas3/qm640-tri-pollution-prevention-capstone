@@ -7,9 +7,9 @@ Author: Somnath Das · Advisor: Rishab Pandey · Summer 2026 Term
 
 U.S. manufacturing facilities report many pollution-prevention actions to the EPA each year, but plant managers and environmental health and safety (EHS) leaders lack a simple, recent-data way to judge whether records with those actions are more likely to see a meaningful reduction in the same chemical's on-site release the following year. This project builds an interpretable screening approach — not a causal claim — using EPA Toxics Release Inventory (TRI) Basic Plus data from 2020–2024.
 
-The primary outcome, `REDUCTION_10`, equals 1 when a facility-chemical's next-year on-site release is no more than 90% of the current-year release. Four linked research questions examine (1) whether reduction rates differ by year/subsector, (2) whether reporting any pollution-prevention action is associated with achieving `REDUCTION_10` after controls, (3) which broad action categories matter most, and (4) whether an interpretable model can predict non-reduction on a held-out future year (2023→2024).
+The primary outcome, `REDUCTION_10`, equals 1 when a facility-chemical's next-year on-site release is no more than 90% of the current-year release. Four linked research questions examine (1) whether reduction rates differ by year/subsector, (2) whether reporting any pollution-prevention action is associated with achieving `REDUCTION_10` after controls, (3) which action types matter most, and (4) whether an interpretable model can predict non-reduction on a held-out future year (2023→2024).
 
-Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix E: dataset screenshots for all reporting years and folder structure) are in [`reports/QM640_Synopsis_TRI_2020_2024.docx`](reports/QM640_Synopsis_TRI_2020_2024.docx).
+Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix D: repository folder structure and a reconciliation of GitHub data counts with Table 3) are in [`reports/QM640_Synopsis_TRI_2020_2024.docx`](reports/QM640_Synopsis_TRI_2020_2024.docx).
 
 ## Dataset source
 
@@ -36,10 +36,8 @@ qm640-tri-pollution-prevention-capstone/
 │   └── 01_data_exploration.ipynb   # EDA + Table 3 reconciliation for all years 2020-2024
 ├── src/
 │   └── data_prep.py           # loads raw TRI files, applies Form R / manufacturing NAICS filters + consolidation, joins 1A+2A
-├── reports/
-│   └── QM640_Synopsis_TRI_2020_2024.docx   # full synopsis: background, RQs, hypotheses, sample size, analysis plan, references
-└── images/
-    └── 01-06_*.png            # dataset preview, shape, info, describe, missing values, action-rate distribution
+└── reports/
+    └── QM640_Synopsis_TRI_2020_2024.docx   # full synopsis: background, RQs, hypotheses, sample size, analysis plan, references
 ```
 
 ## Reproducing this work
@@ -47,15 +45,15 @@ qm640-tri-pollution-prevention-capstone/
 1. Download the raw TRI Basic Plus files per [`data/README.md`](data/README.md) into `data/raw/<year>/`.
 2. `pip install -r requirements.txt`
 3. Run `src/data_prep.py` to filter to Form R / manufacturing records and join File 1A + 2A within each year.
-4. Open `notebooks/01_data_exploration.ipynb` for the exploratory data analysis shown in `images/`.
+4. Open `notebooks/01_data_exploration.ipynb` for the exploratory data analysis and the raw-to-consolidated reconciliation.
 
 ## Data validation
 
-Screenshots in `images/` and Appendix E show RAW file structure before filtering. The synopsis's Table 3/Table 4 counts reflect the Form R + manufacturing-NAICS filter and duplicate consolidation applied by `src/data_prep.py`. `images/07_data_count_reconciliation.png` (Figure E1 in the synopsis) walks raw → filtered → consolidated for every year and confirms an exact match with Table 3. See [`VALIDATION_CHECKLIST.md`](VALIDATION_CHECKLIST.md) for the full data and APA/template validation process, which is re-run for every new synopsis version.
+`src/data_prep.py --reconcile` and `notebooks/01_data_exploration.ipynb` walk each reporting year from raw rows through the Form R filter, the manufacturing-NAICS filter, and duplicate consolidation. Table D1 in Appendix D of the synopsis reports the same walk as a table (not a screenshot) and confirms an exact match with Table 3 for every year, 2020–2024. See [`VALIDATION_CHECKLIST.md`](VALIDATION_CHECKLIST.md) for the full data and APA/template validation process, which is re-run for every new synopsis version.
 
 ## Status
 
-This repository reflects the **synopsis stage** — problem framing, data pipeline scaffolding, and exploratory analysis. Full modeling (RQ2–RQ4: logistic regression, action-category comparison, penalized prediction model on the 2023→2024 holdout) will follow in later phases per the six-week execution plan in Appendix D of the synopsis.
+This repository reflects the **synopsis stage** — problem framing, data pipeline scaffolding, and exploratory analysis. Full modeling (RQ2–RQ4: logistic regression, action-type comparison, penalized prediction model on the 2023→2024 holdout) will follow in later project phases.
 
 ## References
 
