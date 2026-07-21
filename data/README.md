@@ -42,4 +42,4 @@ Full field-level definitions, transformation rules, and the derivation of `REDUC
 
 **Note:** reporting year 2024 is the held-out test set (2023→2024 transition) — used only for the final RQ4 holdout evaluation, never for model development.
 
-**Note on record counts:** the raw files above contain every TRI Basic Plus record (all industries). The synopsis's Table 3/Table 4 counts are smaller because they apply the Form R filter, the manufacturing NAICS (31/32/33) filter, and duplicate consolidation — see `src/data_prep.py`, `notebooks/01_data_exploration.ipynb`, Table D1 in Appendix D of the synopsis, and `VALIDATION_CHECKLIST.md` in the repo root for the reconciliation.
+**Note on record counts:** the raw files above contain every TRI Basic Plus record (all industries). The synopsis's Table 3/Table 4 counts are smaller because they apply the Form R filter, the manufacturing NAICS (31/32/33) filter, and duplicate consolidation — see `src/data_prep.py` (`--reconcile` / `--reduction10`), `notebooks/01_data_exploration.ipynb`, and `VALIDATION_CHECKLIST.md` in the repo root for the reconciliation.
