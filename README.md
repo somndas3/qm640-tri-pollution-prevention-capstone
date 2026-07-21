@@ -9,7 +9,7 @@ U.S. manufacturing facilities report many pollution-prevention actions to the EP
 
 The primary outcome, `REDUCTION_10`, equals 1 when a facility-chemical's next-year on-site release is no more than 90% of the current-year release. Four linked research questions examine (1) whether reduction rates differ by year/subsector, (2) whether reporting any pollution-prevention action is associated with achieving `REDUCTION_10` after controls, (3) which action types matter most, and (4) whether an interpretable model can predict non-reduction on a held-out future year (2023→2024).
 
-Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix D: repository folder structure and a reconciliation of GitHub data counts with Table 3) are in [`reports/QM640_Synopsis_TRI_2020_2024.docx`](reports/QM640_Synopsis_TRI_2020_2024.docx).
+Full problem statement, hypotheses, sample-size planning, and analysis plan (including Appendix D: GitHub repository link and folder structure) are in [`reports/QM640_Synopsis_TRI_2020_2024.docx`](reports/QM640_Synopsis_TRI_2020_2024.docx).
 
 ## Dataset source
 
@@ -49,7 +49,7 @@ qm640-tri-pollution-prevention-capstone/
 
 ## Data validation
 
-`src/data_prep.py --reconcile` and `notebooks/01_data_exploration.ipynb` walk each reporting year from raw rows through the Form R filter, the manufacturing-NAICS filter, and duplicate consolidation. Table D1 in Appendix D of the synopsis reports the same walk as a table (not a screenshot) and confirms an exact match with Table 3 for every year, 2020–2024. See [`VALIDATION_CHECKLIST.md`](VALIDATION_CHECKLIST.md) for the full data and APA/template validation process, which is re-run for every new synopsis version.
+`src/data_prep.py --reconcile` and `notebooks/01_data_exploration.ipynb` walk each reporting year from raw rows through the Form R filter, the manufacturing-NAICS filter, and duplicate consolidation, and confirm an exact match with Table 3 of the synopsis for every year, 2020–2024. See [`VALIDATION_CHECKLIST.md`](VALIDATION_CHECKLIST.md) for the full data and APA/template validation process, which is re-run for every new synopsis version.
 
 ## Status
 
