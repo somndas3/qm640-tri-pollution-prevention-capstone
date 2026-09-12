@@ -1,6 +1,14 @@
 """
 data_prep.py
 
+STATUS: synopsis-stage script, kept for transparency. The final analysis pipeline
+(parsing, consolidation, cross-year matching, and export) is implemented in
+notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb. In particular, the final
+pipeline replaced the "highest DOCUMENT CONTROL NUMBER" duplicate rule described
+below with the conditional rule in Appendix C of the final report: revision-coded
+filings supersede earlier filings, and otherwise the release quantities of the
+original filings are summed. Use the EDA notebook to reproduce final results.
+
 Loads raw EPA TRI Basic Plus File 1A and File 2A for each reporting year (2020-2024),
 applies the Form R and manufacturing-NAICS (31/32/33) filters described in the synopsis,
 consolidates duplicate facility-chemical-year records using a deterministic tie-break
