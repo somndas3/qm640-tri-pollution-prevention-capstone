@@ -1,6 +1,7 @@
 # Pollution-Prevention Actions and Next-Year Toxic Release Reduction in U.S. Manufacturing
 
 **QM640 Data Analytics Capstone, Walsh College**
+
 Author: Somnath Das · Mentor: Professor Rishab Pandey · Summer 2026 Term · Final report submitted September 15, 2026
 
 ## Project deliverables
