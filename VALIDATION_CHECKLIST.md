@@ -1,5 +1,7 @@
 # Validation Checklist
 
+> **Status note (final report stage, September 2026).** Sections 1 to 6 were written during the synopsis stage and are kept as a record of the checks performed then. Two items have since been superseded: (1) the example counts in Section 1 (123,611 and 39,967) were preliminary synopsis values; the final counts are **123,535** development records and **39,966** holdout records; (2) the "highest DOCUMENT CONTROL NUMBER" duplicate rule in Section 6 was replaced by the conditional rule in the final report, Appendix C (revision-coded filings supersede; otherwise original filings are summed), implemented in `notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb`. Final-stage checks are in Section 7.
+
 Run this checklist every time a new synopsis version is generated, before pushing to GitHub. It was created after V7 was found to have a data-count inconsistency between GitHub screenshots and the synopsis's own tables.
 
 ## 1. Data reconciliation (why counts can drift)
@@ -64,3 +66,13 @@ Cross-check section order and required content against `QM 640 Synopsis template
 - [ ] When editing sample-size figures in Table 2 / Appendix B (RQ2 event-rate, RQ4 event-rate, action prevalence), recompute the full derivation by hand (or with a script) rather than adjusting only the "Final Answer" line — the intermediate values (`p̄`, `r`, `n₁`) all shift together and must stay internally consistent.
 - [ ] Appendix B's substitution-value table was removed as duplicative of the RQ1–RQ4 worked derivations that already state each value's classification and rationale inline; do not re-add a standalone substitution table unless the RQ derivations are simultaneously trimmed to avoid re-introducing the duplication.
 - [ ] Table D1 (raw → Form R → manufacturing → consolidated reconciliation) was removed from Appendix D by author decision to shorten the appendix further. Appendix D now covers only the GitHub link and repository folder structure. The main-text Data Description section no longer claims a reconciliation table lives in Appendix D (the "and a reconciliation of GitHub data counts with Table 3" clause was removed from that sentence) — if Table D1 or an equivalent is ever re-added, restore that cross-reference too.
+
+## 7. Final report and repository (added at the final report stage)
+
+- [x] Every number in `reports/QM640_Final_Report_Somnath_Das.docx` reconciled against the executed final notebook `notebooks/02_QM640_TRI_2020_2024_final.ipynb` (Drive and GitHub copies of both notebooks confirmed identical).
+- [x] RQ4 described consistently as a 13-predictor elastic net with no subsector indicators and no action-year term.
+- [x] Explanatory results (RQ1 to RQ3) reported as associations; odds ratios described as odds, not probabilities; nonsignificant action types described as "not demonstrated," not "ineffective."
+- [x] Main-text page count (text only, excluding title page, tables, figures, references, and appendices) within the 15 to 20 pages required by the final report template.
+- [x] APA 7 formatting: Times New Roman 12 pt, double spacing, 1-inch margins, page numbers top right on every page, table and figure notes in 12 pt, references with hanging indents.
+- [x] Final report (Word and PDF) in `reports/`; final presentation in `presentation/`; root `README.md` lists every deliverable and notes where the slides differ from the report.
+- [ ] Before any future push, confirm each GitHub upload actually landed by opening the file on GitHub.
