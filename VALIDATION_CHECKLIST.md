@@ -69,7 +69,7 @@ Cross-check section order and required content against `QM 640 Synopsis template
 
 ## 7. Final report and repository (added at the final report stage)
 
-- [x] Every number in `reports/QM640_Final_Report_Somnath_Das.pdf` reconciled against the executed final notebook `notebooks/02_QM640_TRI_2020_2024_final.ipynb` (Drive and GitHub copies of both notebooks confirmed identical).
+- [x] Every number in `reports/QM640_Final_Report_Somnath_Das.pdf` reconciled against the executed final notebook `notebooks/03_QM640_TRI_2020_2024_final.ipynb` (Drive and GitHub copies of both notebooks confirmed identical).
 - [x] RQ4 described consistently as a 13-predictor elastic net with no subsector indicators and no action-year term.
 - [x] Explanatory results (RQ1 to RQ3) reported as associations; odds ratios described as odds, not probabilities; nonsignificant action types described as "not demonstrated," not "ineffective."
 - [x] Main-text page count (text only, excluding title page, tables, figures, references, and appendices) within the 15 to 20 pages required by the final report template.
