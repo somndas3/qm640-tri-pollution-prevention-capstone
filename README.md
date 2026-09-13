@@ -8,15 +8,13 @@ Author: Somnath Das · Mentor: Professor Rishab Pandey · Summer 2026 Term · Fi
 
 | Deliverable | File |
 |---|---|
-| **Final report** (APA 7, submission version) | [`reports/QM640_Final_Report_Somnath_Das.docx`](reports/QM640_Final_Report_Somnath_Das.docx) |
-| Final report, PDF for reading in the browser | [`reports/QM640_Final_Report_Somnath_Das.pdf`](reports/QM640_Final_Report_Somnath_Das.pdf) |
-| **Final presentation** | [`presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pptx`](presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pptx) |
-| Final presentation, PDF for reading in the browser | [`presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf`](presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf) |
+| **Final report** (APA 7, submission version) | [`reports/QM640_Final_Report_Somnath_Das.pdf`](reports/QM640_Final_Report_Somnath_Das.pdf) |
+| **Final presentation** | [`presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf`](presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf) |
 | **Final analysis notebook** (RQ1 to RQ4 results) | [`notebooks/02_QM640_TRI_2020_2024_final.ipynb`](notebooks/02_QM640_TRI_2020_2024_final.ipynb) |
 | Exploratory data analysis and data preparation notebook | [`notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb`](notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb) |
-| Synopsis | [`reports/QM640_Synopsis_TRI_2020_2024.docx`](reports/QM640_Synopsis_TRI_2020_2024.docx) |
+| Synopsis | [`reports/QM640_Synopsis_TRI_2020_2024.pdf`](reports/QM640_Synopsis_TRI_2020_2024.pdf) |
 
-The final report is the authoritative record of methods and results. Every number in it was checked against the executed final notebook.
+All deliverables are published as PDF so that formatting is identical for every reader. The final report is the authoritative record of methods and results; every number in it was checked against the executed final notebook.
 
 ## Problem
 
@@ -124,11 +122,9 @@ qm640-tri-pollution-prevention-capstone/
 ├── src/
 │   └── data_prep.py           # synopsis-stage preparation script (superseded by the EDA notebook)
 ├── reports/
-│   ├── QM640_Synopsis_TRI_2020_2024.docx
-│   ├── QM640_Final_Report_Somnath_Das.docx          # FINAL report
-│   └── QM640_Final_Report_Somnath_Das.pdf
+│   ├── QM640_Synopsis_TRI_2020_2024.pdf
+│   └── QM640_Final_Report_Somnath_Das.pdf           # FINAL report
 └── presentation/
-    ├── QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pptx
     └── QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf
 ```
 
