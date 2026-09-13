@@ -38,7 +38,7 @@ Each file below is the **header row plus the first 200 data rows** of the corres
 - **File 1A:** `TRIFD` (facility ID), `FACILITY NAME`, `FACILITY STATE`, `PRIMARY NAICS CODE`, `DOCUMENT CONTROL NUMBER`, `CAS NUMBER`, `CHEMICAL NAME`, `UNIT OF MEASURE`, and total on-site release fields.
 - **File 2A:** `DOCUMENT CONTROL NUMBER` (join key with File 1A), production/activity ratio, and up to four `SOURCE REDUCTION ACTIVITY CODE` fields (used to derive `REPORTED_ANY_SOURCE_REDUCTION_ACTION`).
 
-Full definitions of the analysis variables, the cleaning log, and the record flow are documented in the final report, `reports/QM640_Final_Report_Somnath_Das.docx` (Appendix E, Tables E1 to E3). The duplicate-filing consolidation rule is in Appendix C, and `data_dictionary.csv` in the Drive `processed/` folder defines every exported column.
+Full definitions of the analysis variables, the cleaning log, and the record flow are documented in the final report, `reports/QM640_Final_Report_Somnath_Das.pdf` (Appendix E, Tables E1 to E3). The duplicate-filing consolidation rule is in Appendix C, and `data_dictionary.csv` in the Drive `processed/` folder defines every exported column.
 
 **Note:** reporting year 2024 is the held-out test set (2023→2024 transition), used only once for the final RQ4 holdout evaluation and never for model development.
 
