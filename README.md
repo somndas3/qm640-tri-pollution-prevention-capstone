@@ -10,7 +10,7 @@ Author: Somnath Das · Mentor: Professor Rishab Pandey · Summer 2026 Term · Fi
 |---|---|
 | **Final report** (APA 7, submission version) | [`reports/QM640_Final_Report_Somnath_Das.pdf`](reports/QM640_Final_Report_Somnath_Das.pdf) |
 | **Final presentation** | [`presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf`](presentation/QM640_Walsh_Capstone_Final_Presentation_Somnath_Das.pdf) |
-| **Final analysis notebook** (RQ1 to RQ4 results) | [`notebooks/02_QM640_TRI_2020_2024_final.ipynb`](notebooks/02_QM640_TRI_2020_2024_final.ipynb) |
+| **Final analysis notebook** (RQ1 to RQ4 results) | [`notebooks/03_QM640_TRI_2020_2024_final.ipynb`](notebooks/03_QM640_TRI_2020_2024_final.ipynb) |
 | Exploratory data analysis and data preparation notebook | [`notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb`](notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb) |
 | Synopsis | [`reports/QM640_Synopsis_TRI_2020_2024.pdf`](reports/QM640_Synopsis_TRI_2020_2024.pdf) |
 
@@ -118,7 +118,7 @@ qm640-tri-pollution-prevention-capstone/
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb                    # early synopsis-stage exploration
 │   ├── 02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb    # EDA and data preparation: parsing, consolidation, matching, export, 19 figures
-│   └── 02_QM640_TRI_2020_2024_final.ipynb           # FINAL analysis: RQ1 to RQ4, holdout evaluation, screening lift
+│   └── 03_QM640_TRI_2020_2024_final.ipynb           # FINAL analysis: RQ1 to RQ4, holdout evaluation, screening lift
 ├── src/
 │   └── data_prep.py           # synopsis-stage preparation script (superseded by the EDA notebook)
 ├── reports/
@@ -135,7 +135,7 @@ Both notebooks were run top to bottom in Google Colab with the data on Google Dr
 1. Copy the Drive folder above into your own Google Drive, or download the raw files from the EPA pages.
 2. Update the data path near the top of each notebook (the notebooks use `/content/drive/MyDrive/Walsh_DBA/Year2/Projects/Capstone_QM640_TRI_2020_2024/Data`).
 3. Run `notebooks/02_EDA_QM640_Synopsis_TRI_2020_2024.ipynb` from top to bottom. It performs parsing, filtering, consolidation, cross-year matching, the full EDA, and the controlled export of both analysis datasets to `processed/`.
-4. Run `notebooks/02_QM640_TRI_2020_2024_final.ipynb` from top to bottom. It fits the RQ1 to RQ3 models, tunes and locks the RQ4 elastic net, and scores the sealed holdout once.
+4. Run `notebooks/03_QM640_TRI_2020_2024_final.ipynb` from top to bottom. It fits the RQ1 to RQ3 models, tunes and locks the RQ4 elastic net, and scores the sealed holdout once.
 5. To run outside Colab, `pip install -r requirements.txt` and replace the Google Drive mount cell with a local path.
 
 `src/data_prep.py` is kept for transparency. It reproduces the synopsis-stage record walk but uses the earlier "highest document control number" duplicate rule, which the final pipeline replaced (final report, Appendix C). Use the EDA notebook to reproduce final results.
