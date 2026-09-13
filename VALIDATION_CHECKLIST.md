@@ -44,9 +44,9 @@ Cross-check section order and required content against `QM 640 Synopsis template
 
 ## 4. GitHub sync
 
-- [ ] Old docx versions are deleted from `reports/` when a new version is pushed (only the current version should remain).
+- [x] Deliverables are published as PDF only; no .docx or .pptx source files remain in `reports/` or `presentation/`. Superseded PDFs are replaced, not accumulated.
 - [ ] Superseded images are deleted from `images/` when replaced.
-- [ ] `README.md` and `data/README.md` version references are updated to point at the new docx filename.
+- [x] `README.md` and `data/README.md` version references point at the current PDF filenames.
 - [ ] Verify each GitHub commit actually landed (navigate to the file/folder and confirm) — upload/delete clicks can silently fail to commit if the button is clicked before the page finishes staging the file.
 
 ## 5. Professor feedback / terminology and appendix discipline (added after the RQ3 category → action-type revision)
@@ -69,10 +69,10 @@ Cross-check section order and required content against `QM 640 Synopsis template
 
 ## 7. Final report and repository (added at the final report stage)
 
-- [x] Every number in `reports/QM640_Final_Report_Somnath_Das.docx` reconciled against the executed final notebook `notebooks/02_QM640_TRI_2020_2024_final.ipynb` (Drive and GitHub copies of both notebooks confirmed identical).
+- [x] Every number in `reports/QM640_Final_Report_Somnath_Das.pdf` reconciled against the executed final notebook `notebooks/02_QM640_TRI_2020_2024_final.ipynb` (Drive and GitHub copies of both notebooks confirmed identical).
 - [x] RQ4 described consistently as a 13-predictor elastic net with no subsector indicators and no action-year term.
 - [x] Explanatory results (RQ1 to RQ3) reported as associations; odds ratios described as odds, not probabilities; nonsignificant action types described as "not demonstrated," not "ineffective."
 - [x] Main-text page count (text only, excluding title page, tables, figures, references, and appendices) within the 15 to 20 pages required by the final report template.
 - [x] APA 7 formatting: Times New Roman 12 pt, double spacing, 1-inch margins, page numbers top right on every page, table and figure notes in 12 pt, references with hanging indents.
-- [x] Final report (Word and PDF) in `reports/`; final presentation in `presentation/`; root `README.md` lists every deliverable and notes where the slides differ from the report.
+- [x] Final report PDF in `reports/`; final presentation PDF in `presentation/`; root `README.md` lists every deliverable and notes where the slides differ from the report.
 - [ ] Before any future push, confirm each GitHub upload actually landed by opening the file on GitHub.
